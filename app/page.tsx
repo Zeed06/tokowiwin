@@ -6,14 +6,14 @@ export default function Home() {
       <div id="beranda" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 sm:py-16 md:py-24 lg:py-28">
           <section className="space-y-4 sm:space-y-6 order-2 lg:order-1">
-            <p className="text-xs sm:text-sm font-semibold text-purple-600 uppercase tracking-widest">Toko Wiwin • Sejak 1995</p>
+            <p className="text-xs sm:text-sm font-semibold text-purple-600 uppercase tracking-widest">Sejak 1995</p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-purple-900 leading-tight">
-              Buka Peluang Bisnis Anda,
+              Selamat Datang Di
               <br />
-              Mulailah dari Kami
+              Toko Wiwin 
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-xl">
-              Kami hadir dengan solusi praktis dan harga terjangkau, untuk menghemat tenaga, waktu, dan biaya dalam membuat website.
+              Temukan berbagai produk pilihan dengan kualitas terbaik. Nikmati pengalaman belanja yang mudah, aman, dan terpercaya.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
               <Link
