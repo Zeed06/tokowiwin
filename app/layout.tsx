@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 export const metadata: Metadata = {
   title: "Toko Wiwin - Product Catalog",
   description: "Browse our product catalog",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
 };
 
 export default function RootLayout({
@@ -15,6 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="theme-color" content="#a855f7" />
+      </head>
       <body>
         <AuthProvider>
           <Navigation />

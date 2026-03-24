@@ -106,10 +106,10 @@ export default function ProductForm({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto">
+    <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6 max-w-3xl mx-auto">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-          Product Name
+        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+          Nama Produk
         </label>
         <input
           type="text"
@@ -118,13 +118,13 @@ export default function ProductForm({
           value={formData.name}
           onChange={handleInputChange}
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
         />
       </div>
 
       <div>
-        <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-1">
-          Price
+        <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-2">
+          Harga
         </label>
         <input
           type="number"
@@ -135,13 +135,13 @@ export default function ProductForm({
           required
           min="0"
           step="0.01"
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
         />
       </div>
 
       <div>
-        <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
-          Category
+        <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-2">
+          Kategori
         </label>
         <input
           type="text"
@@ -150,13 +150,13 @@ export default function ProductForm({
           value={formData.category}
           onChange={handleInputChange}
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
         />
       </div>
 
       <div>
-        <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
-          Description
+        <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
+          Deskripsi
         </label>
         <textarea
           id="description"
@@ -165,18 +165,18 @@ export default function ProductForm({
           onChange={handleInputChange}
           required
           rows={4}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
         />
       </div>
 
       <div>
-        <label htmlFor="image" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="image" className="block text-sm font-medium text-gray-700 mb-3">
           Gambar Produk
         </label>
         
         {/* Input Type Toggle */}
-        <div className="mb-4 flex gap-4">
-          <label className="flex items-center">
+        <div className="mb-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <label className="flex items-center cursor-pointer">
             <input
               type="radio"
               name="imageInputType"
@@ -186,11 +186,11 @@ export default function ProductForm({
                 setImageInputType("url");
                 setImageFile(null);
               }}
-              className="mr-2"
+              className="mr-2 w-4 h-4 cursor-pointer"
             />
             <span className="text-sm text-gray-700">URL Gambar</span>
           </label>
-          <label className="flex items-center">
+          <label className="flex items-center cursor-pointer">
             <input
               type="radio"
               name="imageInputType"
@@ -200,9 +200,9 @@ export default function ProductForm({
                 setImageInputType("file");
                 setFormData((prev) => ({ ...prev, imageUrl: "" }));
               }}
-              className="mr-2"
+              className="mr-2 w-4 h-4 cursor-pointer"
             />
-            <span className="text-sm text-gray-700">Upload File (max 500KB)</span>
+            <span className="text-sm text-gray-700">Upload File (maks 500KB)</span>
           </label>
         </div>
 
@@ -216,9 +216,9 @@ export default function ProductForm({
               value={formData.imageUrl}
               onChange={handleImageUrlChange}
               placeholder="https://example.com/image.jpg"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
             />
-            <p className="mt-1 text-xs text-gray-500">
+            <p className="mt-2 text-xs text-gray-500">
               Masukkan URL gambar dari internet (contoh: Imgur, Unsplash, dll)
             </p>
           </div>
@@ -232,9 +232,9 @@ export default function ProductForm({
               id="image"
               accept="image/*"
               onChange={handleImageFileChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
             />
-            <p className="mt-1 text-xs text-gray-500">
+            <p className="mt-2 text-xs text-gray-500">
               Upload gambar dari komputer (maksimal 500KB untuk kualitas terbaik)
             </p>
           </div>
@@ -242,7 +242,7 @@ export default function ProductForm({
 
         {/* Preview */}
         {previewUrl && (
-          <div className="mt-4 relative w-full h-64 rounded-md overflow-hidden border border-gray-200">
+          <div className="mt-4 relative w-full h-48 sm:h-64 rounded-lg overflow-hidden border border-gray-200">
             <img
               src={previewUrl}
               alt="Preview"
@@ -259,7 +259,7 @@ export default function ProductForm({
       <button
         type="submit"
         disabled={isUploading}
-        className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-blue-600 text-white py-3 sm:py-4 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed font-medium text-base transition min-h-11"
       >
         {isUploading ? "Uploading..." : submitLabel}
       </button>
